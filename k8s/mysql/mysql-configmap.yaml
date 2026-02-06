@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: marketplace
+data:
+  MYSQL_DATABASE: marketplace_db
+  MYSQL_USER: marketplace_user
