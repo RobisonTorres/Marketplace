@@ -4,4 +4,6 @@ metadata:
   name: marketplace-config
   namespace: marketplace
 data:
-  SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/marketplace_db
+  SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/marketplace?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+  SPRING_DATASOURCE_USERNAME: marketplace
+  SPRING_JPA_HIBERNATE_DDL_AUTO: update
