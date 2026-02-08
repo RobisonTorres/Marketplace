@@ -13,6 +13,10 @@ spec:
       labels:
         app: marketplace
     spec:
+      initContainers:
+        - name: wait-for-mysql
+          image: busybox:1.28
+          command: ['sh', '-c', "until nc -zv mysql 3306; do echo waiting for mysql; sleep 2; done;"]
       containers:
         - name: marketplace
           image: marketplace:1.0.0
@@ -39,7 +43,7 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
-            initialDelaySeconds: 90
+            initialDelaySeconds: 120
             periodSeconds: 10
             timeoutSeconds: 3
             failureThreshold: 30
