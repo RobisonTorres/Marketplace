@@ -18,7 +18,6 @@ public class MarketplaceApplication {
 		return args -> {
 
 			System.out.println("Fox Two!");
-			System.out.println("Fox Two!");
 		};
 	}
 }
