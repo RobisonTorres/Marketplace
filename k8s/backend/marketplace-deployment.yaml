@@ -20,7 +20,7 @@ spec:
       containers:
         - name: marketplace
           image: marketplace:1.0.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Never
 
           ports:
             - containerPort: 8080
