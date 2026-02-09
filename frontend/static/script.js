@@ -57,12 +57,13 @@ function createCar(event) {
         },
         body: JSON.stringify(bcWrapperDtoCreate)
     })
-    .then(response => {
+    .then(async response => {
         if (response.ok) {
             alert('Product created successfully!');
             document.querySelector('form').reset();
             closeForm(event);
-        
+            //location.reload(true);
+            await showAllCars();
         } else {
             alert('Failed to create product.');
         }
