@@ -5,7 +5,7 @@ INSERT IGNORE INTO cars (id, model, fabrication, color, mileage, plate, price, s
 (1, 'Playstation 5', 2024, 'White', 1, 'X49F35', 299.00, 'NEW', 1),
 (2, 'Smart TV', 2025, 'Black', 2, 'TV490', 199.00, 'SECOND_HAND', 1),
 (3, 'Monitor Gamer', 2026, 'Black', 1, 'MTGMR', 79.00, 'SECOND_HAND', 2),
-(4, 'Refrigerator', 2024, 'Silver', 40, 'REF0A', 0.00, 'NEW', 3);
+(4, 'Refrigerator', 2024, 'Silver', 40, 'REF0A', 250.00, 'NEW', 3);
 
 INSERT IGNORE INTO photos (photo, car_id) VALUES
 ('https://webfones.vtexassets.com/arquivos/ids/252949-800-800?v=638990029957600000&width=800&height=800&aspect=true', 1),
