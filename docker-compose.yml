@@ -48,5 +48,9 @@ services:
       marketplace:
         condition: service_started
 
+networks:
+  app-network:
+    driver: bridge
+
 volumes:
   mysql_data:
