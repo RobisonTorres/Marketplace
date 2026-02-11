@@ -29,6 +29,12 @@ spec:
       containers:
         - name: marketplace
           image: marketplace:1.0.0
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
           imagePullPolicy: Never
 
           ports:

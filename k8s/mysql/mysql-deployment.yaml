@@ -6,7 +6,7 @@ metadata:
 spec:
   replicas: 1
   strategy:
-    type: Recreate 
+    type: Recreate
   selector:
     matchLabels:
       app: mysql
@@ -18,14 +18,22 @@ spec:
       containers:
         - name: mysql
           image: mysql:8.0
+
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+
           ports:
             - containerPort: 3306
+
           envFrom:
             - configMapRef:
                 name: mysql-config
             - secretRef:
                 name: mysql-secret
-          
+
           volumeMounts:
             - name: mysql-storage
               mountPath: /var/lib/mysql
@@ -33,7 +41,7 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 3306
-            initialDelaySeconds: 30 
+            initialDelaySeconds: 30
             periodSeconds: 5
 
           livenessProbe:
@@ -41,7 +49,7 @@ spec:
               port: 3306
             initialDelaySeconds: 60
             periodSeconds: 10
-            
+
       volumes:
         - name: mysql-storage
           persistentVolumeClaim:
