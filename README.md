@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# Marketplace App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple e-commerce application that displays different products based on the user's selection. The application allows users to log in, browse products, view product details, and log out.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Login and logout functionality
+- Browse a list of products
+- View detailed information about a selected product
+- Product categories for male and female items
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- Node.js
+- Expo
+- React Native
+- Redux Toolkit
 
-   ```bash
-   npx expo start
-   ```
+## Installation
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+1. Clone the repository:
 
 ```bash
-npm run reset-project
+git clone https://github.com/RobisonTorres/Marketplace.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Navigate to the project directory:
 
-## Learn more
+```bash
+cd Marketplace
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Install the dependencies:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+npm install @reduxjs/toolkit react-redux
+npx expo install expo-router
+```
 
-## Join the community
+4. Start the application:
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Screenshots
+
+_Add screenshots of the application here._
